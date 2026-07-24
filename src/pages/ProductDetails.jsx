@@ -112,7 +112,7 @@ const ProductDetails = () => {
       {/* Back link */}
       <button
         onClick={() => navigate(-1)}
-        className="btn btn-primary"
+        className="btn btn-primary product-back-btn"
         style={{
           height: '42px',
           padding: '0 20px',
@@ -130,10 +130,10 @@ const ProductDetails = () => {
         ← Geri Dön
       </button>
 
-      <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
+      <div className="product-details-grid" style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(300px, 1fr))', gap: '2rem' }}>
         {/* Left Column: Image Gallery */}
         <div>
-          <div className="glass-panel" style={{ padding: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '350px', position: 'relative' }}>
+          <div className="glass-panel product-image-container" style={{ padding: '1rem', display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '350px', position: 'relative' }}>
             {/* Main active image */}
             <img
               src={activeImage || product.image}
@@ -276,7 +276,7 @@ const ProductDetails = () => {
         </div>
 
         {/* Right Column: Info details */}
-        <div className="glass-panel" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+        <div className="glass-panel product-info-container" style={{ padding: '2rem', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
           <div>
             <span style={{ 
               display: 'inline-block',

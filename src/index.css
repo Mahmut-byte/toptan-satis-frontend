@@ -1774,5 +1774,32 @@ input::-ms-clear {
     font-size: 0.75rem !important;
     margin-bottom: 8px !important;
   }
+
+  /* Product Details Page Mobile Styling */
+  .product-details-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+  .product-image-container {
+    min-height: auto !important;
+    padding: 0.75rem !important;
+    background: #ffffff !important;
+  }
+  .product-image-container img {
+    max-height: 280px !important;
+  }
+  .product-info-container {
+    padding: 1.25rem !important;
+    background: #ffffff !important;
+  }
+  .product-info-container h1 {
+    font-size: 1.5rem !important;
+    margin-bottom: 0.75rem !important;
+  }
+  .product-back-btn {
+    margin-bottom: 1rem !important;
+    height: 38px !important;
+    font-size: 0.85rem !important;
+  }
 }
 
