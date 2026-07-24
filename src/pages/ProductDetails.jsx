@@ -20,6 +20,10 @@ const ProductDetails = () => {
   const [adding, setAdding] = useState(false);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [id]);
+
+  useEffect(() => {
     const fetchProduct = async () => {
       try {
         const res = await axios.get(`/api/products/${id}`);

@@ -66,6 +66,10 @@ const Category = () => {
   const { showToast } = useContext(CartContext);
 
   useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [categoryName]);
+
+  useEffect(() => {
     const fetchProducts = async () => {
       try {
         const res = await axios.get('/api/products');
