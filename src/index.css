@@ -1692,3 +1692,87 @@ input::-ms-clear {
   background: #b91c1c;
 }
 
+/* Compact Dual-Column Mobile Product Grid Overrides */
+@media (max-width: 768px) {
+  .grid-catalog {
+    grid-template-columns: repeat(2, 1fr) !important;
+    gap: 0.75rem !important;
+  }
+  
+  .product-info {
+    padding: 0.75rem !important;
+  }
+  
+  .product-name {
+    font-size: 0.95rem !important;
+    height: 2.4rem !important;
+    line-clamp: 2 !important;
+    -webkit-line-clamp: 2 !important;
+    display: -webkit-box !important;
+    -webkit-box-orient: vertical !important;
+    overflow: hidden !important;
+    margin-bottom: 0.25rem !important;
+  }
+
+  .product-category {
+    font-size: 0.65rem !important;
+    margin-bottom: 2px !important;
+  }
+
+  .price-label {
+    font-size: 0.6rem !important;
+  }
+
+  .price-value {
+    font-size: 1.1rem !important;
+  }
+
+  .product-action-section {
+    gap: 0.5rem !important;
+  }
+
+  .cart-controls {
+    flex-direction: column !important;
+    gap: 6px !important;
+    width: 100% !important;
+    align-items: stretch !important;
+  }
+
+  .quantity-selector {
+    width: 100% !important;
+    height: 32px !important;
+    justify-content: space-between !important;
+  }
+
+  .qty-btn {
+    width: 32px !important;
+    height: 30px !important;
+  }
+
+  .qty-input {
+    width: 100% !important;
+    height: 30px !important;
+    font-size: 0.9rem !important;
+  }
+
+  .btn-add-cart {
+    width: 100% !important;
+    height: 34px !important;
+    padding: 0 10px !important;
+    font-size: 0.85rem !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  .auth-required-block .btn {
+    font-size: 0.75rem !important;
+    padding: 8px 10px !important;
+  }
+  
+  .price-hidden-info {
+    font-size: 0.75rem !important;
+    margin-bottom: 8px !important;
+  }
+}
+
