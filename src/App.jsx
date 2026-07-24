@@ -9,6 +9,7 @@ import Register from './pages/Register';
 import Cart from './pages/Cart';
 import Account from './pages/Account';
 import ProductDetails from './pages/ProductDetails';
+import Category from './pages/Category';
 import AdminDashboard from './pages/AdminDashboard';
 import ProtectedRoute from './components/ProtectedRoute';
 import AdminRoute from './components/AdminRoute';
@@ -46,6 +47,7 @@ function App() {
                 <Route path="/login" element={<Login />} />
                 <Route path="/register" element={<Register />} />
                 <Route path="/products/:id" element={<ProductDetails />} />
+                <Route path="/categories/:categoryName" element={<Category />} />
                 <Route path="/forgot-password" element={<ForgotPassword />} />
                 <Route path="/reset-password/:token" element={<ResetPassword />} />
                 <Route path="/verify-email/:token" element={<VerifyEmail />} />

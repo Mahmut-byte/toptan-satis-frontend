@@ -101,22 +101,17 @@ const Navbar = () => {
   }, [searchQuery, allProducts]);
 
   const handleCategoryClick = (category) => {
-    if (window.location.pathname !== '/') {
-      navigate(category === 'Hepsi' ? '/' : `/?category=${encodeURIComponent(category)}`);
+    if (category === 'Hepsi') {
+      navigate('/');
     } else {
-      const newParams = new URLSearchParams(searchParams);
-      if (category === 'Hepsi') {
-        newParams.delete('category');
-      } else {
-        newParams.set('category', category);
-      }
-      setSearchParams(newParams);
+      navigate(`/categories/${encodeURIComponent(category)}`);
     }
     setIsOpen(false);
   };
 
   const totalItems = cartItems.reduce((acc, item) => acc + item.quantity, 0);
-  const selectedCategory = searchParams.get('category') || 'Hepsi';
+  const match = location.pathname.match(/\/categories\/([^/]+)/);
+  const selectedCategory = match ? decodeURIComponent(match[1]) : (searchParams.get('category') || 'Hepsi');
 
   const categoriesList = ['Hepsi', 'Hediyelik', 'Oyuncak', 'Kırtasiye', 'Elektronik'];
 

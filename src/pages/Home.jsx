@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { useSearchParams } from 'react-router-dom';
+import { useSearchParams, useNavigate } from 'react-router-dom';
 import axios from 'axios';
 import ProductCard from '../components/ProductCard';
 import { CartContext } from '../context/CartContext';
@@ -16,6 +16,7 @@ const normalizeString = (str) => {
 };
 
 const Home = () => {
+  const navigate = useNavigate();
   const [products, setProducts] = useState(globalCache.products || []);
   const [loading, setLoading] = useState(!globalCache.products);
   const [error, setError] = useState(null);
@@ -46,13 +47,11 @@ const Home = () => {
   }, []);
 
   const setSelectedCategory = (category) => {
-    const newParams = new URLSearchParams(searchParams);
     if (category === 'Hepsi') {
-      newParams.delete('category');
+      navigate('/');
     } else {
-      newParams.set('category', category);
+      navigate(`/categories/${encodeURIComponent(category)}`);
     }
-    setSearchParams(newParams);
   };
 
   const handleDiscoverClick = () => {
