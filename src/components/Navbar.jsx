@@ -187,12 +187,21 @@ const Navbar = () => {
             )}
           </form>
 
-          {/* Mobile menu toggle */}
-          <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Navigasyonu Aç">
-            <div className={`bar ${isOpen ? 'open' : ''}`} style={{ backgroundColor: '#ffffff' }}></div>
-            <div className={`bar ${isOpen ? 'open' : ''}`} style={{ backgroundColor: '#ffffff' }}></div>
-            <div className={`bar ${isOpen ? 'open' : ''}`} style={{ backgroundColor: '#ffffff' }}></div>
-          </button>
+          {/* Mobile Actions Group (Cart icon + Hamburger Toggle) */}
+          <div className="mobile-actions">
+            {user && user.role !== 'admin' && (
+              <Link to="/cart" className="mobile-cart-btn" aria-label="Sepetim" onClick={() => setIsOpen(false)}>
+                <span>🛒</span>
+                {totalItems > 0 && <span className="cart-badge-mobile">{totalItems}</span>}
+              </Link>
+            )}
+
+            <button className="mobile-toggle" onClick={() => setIsOpen(!isOpen)} aria-label="Navigasyonu Aç">
+              <div className={`bar ${isOpen ? 'open' : ''}`} style={{ backgroundColor: '#ffffff' }}></div>
+              <div className={`bar ${isOpen ? 'open' : ''}`} style={{ backgroundColor: '#ffffff' }}></div>
+              <div className={`bar ${isOpen ? 'open' : ''}`} style={{ backgroundColor: '#ffffff' }}></div>
+            </button>
+          </div>
 
           {/* Auth & Cart Actions */}
           <div className={`navbar-links ${isOpen ? 'mobile-open' : ''}`}>
