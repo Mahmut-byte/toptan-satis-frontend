@@ -1877,6 +1877,7 @@ input::-ms-clear {
   .admin-tabs {
     gap: 0.5rem !important;
     margin-bottom: 1.25rem !important;
+    flex-wrap: wrap !important;
   }
 
   .admin-tabs button {
@@ -1885,6 +1886,11 @@ input::-ms-clear {
     padding: 10px 8px !important;
     text-align: center !important;
     height: auto !important;
+  }
+
+  .admin-form-panel, .admin-list-panel {
+    padding: 1.25rem !important;
+    min-width: 0 !important;
   }
 
   .admin-orders-grid {
