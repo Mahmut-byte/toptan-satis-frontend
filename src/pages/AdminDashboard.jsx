@@ -326,10 +326,10 @@ const AdminDashboard = () => {
   return (
     <>
       <div>
-      <h2 style={{ fontSize: '1.75rem', marginBottom: '2rem' }}>Toptan Sipariş ve Stok Yönetimi (Admin)</h2>
+      <h2 className="admin-title">Toptan Sipariş ve Stok Yönetimi (Admin)</h2>
 
       {/* Navigation Tabs */}
-      <div style={{ display: 'flex', gap: '1rem', borderBottom: '1px solid var(--border-color)', marginBottom: '2rem' }}>
+      <div className="admin-tabs">
         <button
           onClick={() => setActiveSection('products')}
           className={`btn ${activeSection === 'products' ? 'btn-primary' : 'btn-outline'}`}
@@ -687,7 +687,7 @@ const AdminDashboard = () => {
         </div>
       ) : (
         /* Orders Dashboard */
-        <div style={{ display: 'grid', gridTemplateColumns: '300px 1fr', gap: '2rem' }}>
+        <div className="admin-orders-grid">
           {/* Left Sidebar: Customers List */}
           <div className="glass-panel" style={{ padding: '1.5rem', height: 'fit-content' }}>
             <h4 style={{ marginBottom: '1rem', borderBottom: '1px solid var(--border-color)', paddingBottom: '8px', color: 'var(--text-primary)' }}>

@@ -971,6 +971,26 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* Admin Dashboard Styling */
+.admin-title {
+  font-size: 1.75rem;
+  margin-bottom: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+.admin-tabs {
+  display: flex;
+  gap: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  margin-bottom: 2rem;
+}
+
+.admin-orders-grid {
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  gap: 2rem;
+}
+
 .admin-grid {
   display: grid;
   grid-template-columns: 1fr 2fr;
@@ -1845,6 +1865,31 @@ input::-ms-clear {
 
   .navbar-links .cart-nav-btn {
     display: none !important;
+  }
+
+  /* Admin Dashboard Mobile Styling */
+  .admin-title {
+    font-size: 1.35rem !important;
+    margin-bottom: 1.25rem !important;
+    text-align: center !important;
+  }
+
+  .admin-tabs {
+    gap: 0.5rem !important;
+    margin-bottom: 1.25rem !important;
+  }
+
+  .admin-tabs button {
+    flex: 1 1 auto !important;
+    font-size: 0.8rem !important;
+    padding: 10px 8px !important;
+    text-align: center !important;
+    height: auto !important;
+  }
+
+  .admin-orders-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
   }
 }
 
